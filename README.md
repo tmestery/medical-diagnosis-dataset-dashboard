@@ -1,5 +1,5 @@
 # Medical Diagnosis Dashboard
-A Dashboard that shares insights into Medical Diagnosis data. It utilizes pyspark for data aggregation and streamlit for dashboard UI.
+A Dashboard that shares insights into Medical Diagnosis data. It utilizes pyspark for data aggregation and streamlit for dashboard UI. Visualized the correlation between patient age and symptom severity using a fine-tuned local LLaMA3 model for severity scoring.
 
 ## Setup
 Virtual Enviorment with Pyspark:
