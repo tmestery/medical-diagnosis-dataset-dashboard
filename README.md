@@ -8,6 +8,9 @@ Virtual Enviorment with Pyspark:
 - ```source venv/bin/activate```
 - ```pip install -r requirements.txt```
 
+Start ollama3:
+-```ollama run llama3```
+
 ## Run the Program
 - ```streamlit run src/app.py```
 
