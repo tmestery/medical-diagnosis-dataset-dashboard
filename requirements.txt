@@ -1,0 +1,7 @@
+pyspark
+transformers
+datasets
+pandas
+regex
+streamlit
+matplotlib
