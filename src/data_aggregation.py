@@ -10,9 +10,8 @@ ds = load_dataset("BI55/MedText", split="train")
 spark = SparkSession.builder.getOrCreate()
 df = spark.createDataFrame(ds.to_pandas())
 
-OLLAMA_CLI = "/opt/homebrew/bin/ollama"  # adjust if needed
-MODEL_NAME = "llama3.1"  # your local model
-
+OLLAMA_CLI = "/opt/homebrew/bin/ollama"
+MODEL_NAME = "llama3.1" 
 
 def getAges():
     ages = []
@@ -65,7 +64,7 @@ def ollamaScoreAnalysis():
 
         try:
             response = ollama.chat(
-                model="llama3",          # ← or MODEL_NAME if you prefer
+                model="llama3",
                 messages=[
                     {"role": "user", "content": prompt}
                 ],
@@ -93,9 +92,7 @@ def getScores(csv_file="completion_scores.csv"):
     """
     try:
         df = pd.read_csv(csv_file)
-        # Ensure Score column is numeric
         scores = pd.to_numeric(df['Score'], errors='coerce')
-        # Fill any None/NaN with 0 or some default value
         scores = scores.fillna(0).tolist()
         return scores
     except FileNotFoundError:
